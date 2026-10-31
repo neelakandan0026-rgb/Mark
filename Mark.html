@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>Main</title>
+</head>
+<body>
+    <center>
+        <div class="main">
+    <h3 class="numofsub">Number of Subjects</h3>
+
+   <input type="number" id="subjects">
+    </select>
+    <button class="button1" onclick="Submit()">Generate</button><br>
+    <div id="result"></div><br>
+
+    <button class="button2" onclick="Total()">Calculate</button>
+
+    <h2 id="total">Total Marks: 0</h2>
+    </div>
+    </center>
+
+    <script>
+          function Submit(){
+            let n= document.getElementById("subjects").value
+            let result=document.getElementById("result")
+
+            if(n==1){
+                result.innerHTML="Subject 1 : <input type='number' id='mark1'><br>"
+            }
+            else if(n==2){
+                result.innerHTML=`
+                Subject 1 : <input type='number' id='mark1'><br>
+                  Subject 2 : <input type='number' id='mark2'><br>`
+            }
+             else if(n==3){
+                result.innerHTML=`Subject 1 : <input type='number' id='mark1'><br>
+                  Subject 2 : <input type='number' id='mark2'><br>
+                  Subject 3 : <input type='number' id='mark3'><br>`
+            }
+              else if(n==4){
+                result.innerHTML=`Subject 1 : <input type='number' id='mark1'><br>
+                  Subject 2 : <input type='number' id='mark2'><br>
+                  Subject 3 : <input type='number' id='mark3'><br>
+                  Subject 4 : <input type='number' id='mark4'><br>`
+            }
+             else if(n==5){
+                result.innerHTML=`Subject 1 : <input type='number' id='mark1'><br>
+                  Subject 2 : <input type='number' id='mark2'><br>
+                  Subject 3 : <input type='number' id='mark3'><br>
+                  Subject 4 : <input type='number' id='mark4'><br>
+                  Subject 5 : <input type='number' id='mark5'><br>`
+            }
+             else if(n==6){
+                result.innerHTML=`Subject 1 : <input type='number' id='mark1'><br>
+                  Subject 2 : <input type='number' id='mark2'><br>
+                  Subject 3 : <input type='number' id='mark3'><br>
+                  Subject 4 : <input type='number' id='mark4'><br>
+                  Subject 5 : <input type='number' id='mark5'><br>
+                  Subject 6 : <input type='number' id='mark6'><br>`
+            }
+            else{
+                result.innerHTML="please put 1-6 in box"
+            }
+          }
+          function Total(){
+             
+    let n = Number(document.getElementById("subjects").value);
+    let total = 0;
+
+    if (n >= 1) {
+        total += Number(document.getElementById("mark1").value);
+    }
+    if (n >= 2) {
+        total += Number(document.getElementById("mark2").value);
+    }
+    if (n >= 3) {
+        total += Number(document.getElementById("mark3").value);
+    }
+    if (n >= 4) {
+        total += Number(document.getElementById("mark4").value);
+    }
+    if (n >= 5) {
+        total += Number(document.getElementById("mark5").value);
+    }
+    if (n >= 6) {
+        total += Number(document.getElementById("mark6").value);
+    }
+
+    document.getElementById("total").innerHTML = "Total Marks: " + total;
+}
+          
+    </script>
+
+    
+</body>
+</html>
